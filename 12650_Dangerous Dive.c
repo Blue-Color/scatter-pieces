@@ -5,7 +5,7 @@ int main(){
 	/*
 	//ORIGNAL CODE
 	int n = 0, r = 0, tmp = 0, all_live = 1;
-	int i = 0, j = 0;
+	int i = 0, j = 0, k = 0;
 	int sur[] = {0};
 
 	while( scanf("%d %d", &n, &r) != EOF){
@@ -27,9 +27,11 @@ int main(){
 				}	
 			}
 			for(i = 0; i < n; i++){
-				if(sur[i] != i+1){
+				if(sur[k] != i+1){
 					printf("%d ", i+1);
+					k--;
 				}
+				k++;
 			}
 		}
 		printf("\n");	
