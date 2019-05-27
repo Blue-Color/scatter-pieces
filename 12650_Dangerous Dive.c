@@ -2,13 +2,8 @@
 #include<stdint.h>
 
 int main(){
-	
-	int n = 0, r = 0, live = 0;
-	int i = 0;
-	int sur[10005] = {0};
-	
-	#if 0
-	ORIGNAL CODE
+	/*
+	//ORIGNAL CODE
 	int n = 0, r = 0, tmp = 0, all_live = 1;
 	int i = 0, j = 0;
 	int sur[] = {0};
@@ -39,7 +34,12 @@ int main(){
 		}
 		printf("\n");	
 	}
-	#endif
+	*/
+	
+	//IMPROVE VERSION
+	int n = 0, r = 0, live = 0;
+	int i = 0;
+	int sur[10005] = {0};
 	
 	while( scanf("%d %d", &n, &r) != EOF){
 		//initialize 1 to n 
@@ -63,6 +63,5 @@ int main(){
 		}
 		printf("\n");
 	}
-	
 	return 0;
 } 
