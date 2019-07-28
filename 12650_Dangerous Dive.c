@@ -2,7 +2,7 @@
 #include<stdint.h>
 
 int main(){
-	/*
+/*
 	//ORIGNAL CODE
 	int n = 0, r = 0, tmp = 0, all_live = 1;
 	int i = 0, j = 0, k = 0;
@@ -36,7 +36,9 @@ int main(){
 		}
 		printf("\n");	
 	}
-	*/
+	return 0;
+} 
+*/
 	
 	//IMPROVE VERSION
 	int n = 0, r = 0, live = 0;
