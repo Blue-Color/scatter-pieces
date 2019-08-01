@@ -1,3 +1,4 @@
+/*2019.07.29 finished*/
 #include <stdio.h>
 #include <stdint.h>
 #include <string.h>
