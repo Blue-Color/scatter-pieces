@@ -1,3 +1,4 @@
+/*2019.07.20 finished*/ 
 #include <stdio.h>
 #include <stdint.h>
 #include <string.h>
@@ -5,14 +6,14 @@
 
 int digit_sum (int s){
 	
-	int l = 0;
+	int res = 0;
 	
 	while(s != 0){
-		l += s%10;
+		res += s%10; //start from the right
 		s = s/10;
 	}
 
-	return l;
+	return res;
 }
 
 int main(){
@@ -25,6 +26,7 @@ int main(){
 	while(n != 0){
 		
 		rs = n;
+		//run the loop till there is just one number (0-9)
 		while(rs >= 10){
 			rs = digit_sum(rs);
 		}
