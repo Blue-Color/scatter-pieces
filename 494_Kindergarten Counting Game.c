@@ -1,3 +1,4 @@
+/*2019.08.01 finished*/
 #include <stdio.h>
 #include <stdint.h>
 #include <string.h>
@@ -16,7 +17,7 @@ int main(){
 			if( ( str[i] >= 'A' && str[i] <= 'Z' ) || ( str[i] >= 'a' && str[i] <= 'z' )  ){
 				flag=1;
 			}
-			//flag==1 => means there's an alphabet or word before -> can count +1 
+			//flag==1 => means there's an alphabet or word before -> count +1 
 			else if(flag == 1){
 				
 				flag=0;
