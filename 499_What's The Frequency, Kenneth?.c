@@ -1,3 +1,4 @@
+/*2019.08.04 finished*/
 #include <stdio.h>
 #include <stdint.h>
 #include <string.h>
@@ -20,24 +21,22 @@ int main(){
 			
 			if(str[i] == ' ')
 				continue;
-				
+			
 			key[(int)str[i]]++;
-			//printf("str : %d\n", key[(int)str[i]]);
 		}
 		
+		//start to find the max of frequency
 		int max=0;
 		
 		for(i='A'; i<='Z'; i++){
 			max = MAX(max, key[i]);
-			//printf("max : %d\n", max);
 		}
 		for(i='a'; i<='z'; i++){
 			max = MAX(max, key[i]);
-			//printf("max : %d\n", max);
 		}
 		
-
-		
+		//first display upper alphabets, then lower ones
+		//check if the numbers in array is the same as max => means it's the same max frequency
 		for(i='A'; i<='Z'; i++){
 			if(key[i] == max)
 				printf("%c", i);
@@ -48,8 +47,6 @@ int main(){
 		}
 		printf(" %d\n", max);
 	}
-	
-	
 
 	return 0;	
 } 
