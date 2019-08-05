@@ -68,19 +68,20 @@ int main(){
 			continue;
 		}
 		
+		//**the part which is different**//
 		scanf("%d", &wallLast);
-		
 		int high = 0, low = 0;
-		
 		for(i=0; i < n-1; i++){
 			scanf("%d", &wallNow);
 			
-			if(wallLast > wallNow)
+			if(wallLast < wallNow)
 				high++;
-			else if(wallLast < wallNow)
+			else if(wallLast > wallNow)
 				low++;
 			wallLast = wallNow;
 		}
+		//**the part which is different**//
+		
 		printf("Case %d: %d %d\n", c, high, low);
 		c++;
 		t--;
