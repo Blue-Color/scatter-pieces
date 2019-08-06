@@ -22,6 +22,7 @@ int main(){
 			scanf("%d", &num[i]);
 		}
 		
+		// if the numbers in array is increasing
 		if(num[0] < num[1]){
 			
 			for(j = 1; j < 9; j++){
@@ -38,6 +39,7 @@ int main(){
 				printf("Ordered\n");
 				
 		}
+		// if the numbers in array is decreasing
 		else if(num[0] > num[1]){
 				
 			for(j = 1; j < 9; j++){
