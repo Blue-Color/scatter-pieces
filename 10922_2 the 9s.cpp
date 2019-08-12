@@ -1,9 +1,8 @@
+/*2019.08.11 finished*/
 #include <cstdio>
 #include <cstring>
 #include <iostream>
-
 using namespace std;
-
 
 int main(){
 	
@@ -13,11 +12,13 @@ int main(){
 		
 		int sum=0, i;
 		
+		//check if input 0 -> end program
 		if( strlen(num) == 1 && num[0] == '0' )
 			break;
 		
 		for(i=0; i < strlen(num); i++)
 			sum += (num[i]-'0');
+		
 		if(sum % 9 != 0)
 			cout << num <<" is not a multiple of 9.\n";
 		else{
@@ -34,10 +35,8 @@ int main(){
 				sum = s;
 				count++;
 			}
-			
 			cout << num <<" is a multiple of 9 and has 9-degree " << count <<".\n";
 		}
-		
 	}
 	
 	return 0;
