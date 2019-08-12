@@ -1,7 +1,8 @@
+/*2019.08.09 finished*/
 #include <stdio.h>
 #include <stdint.h>
 
-//・kuti・ (10000000), ・lakh・ (100000), ・hajar・ (1000), ・shata・ (100)
+//kuti (10000000), lakh(100000), hajar(1000), shata (100)
 void banglaNum(uint64_t n){
 	
 	if(n/10000000){
@@ -10,7 +11,6 @@ void banglaNum(uint64_t n){
 		printf(" kuti");
 		
 		n %= 10000000;
-		
 	}
 	if(n/100000){
 		
@@ -18,8 +18,6 @@ void banglaNum(uint64_t n){
 		printf(" lakh");
 		
 		n %= 100000;
-		
-		
 	}
 	if(n/1000){
 		
@@ -27,18 +25,15 @@ void banglaNum(uint64_t n){
 		printf(" hajar");
 			
 		n %= 1000;
-		
 	}
 	if(n/100){
 		banglaNum(n/100);
 		printf(" shata");
 			
 		n %= 100;
-	
 	}
 	if(n != 0){
 		printf(" %lld", n);
-		
 	}
 	
 }
