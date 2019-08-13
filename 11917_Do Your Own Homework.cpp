@@ -1,3 +1,4 @@
+/*2019.08.12 finished*/
 #include <cstdio>
 #include <cstring>
 #include <iostream>
@@ -21,10 +22,10 @@ int main(){
 		
 		bool good_at = false;
 		
+		//get the input numbers
 		cin >> num;
 		for(i=0; i < num; i++){
 			cin >> sga.sub[i] >> sga.needTime[i];
-			//printf("sub = %s  time = %d\n", sga.sub[i], sga.needTime[i]);
 		}
 		cin >> day >> needSub;
 		
@@ -48,6 +49,5 @@ int main(){
 		
 		total--;
 	}
-	
 	return 0;
 }
