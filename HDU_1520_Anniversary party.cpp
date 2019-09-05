@@ -1,3 +1,4 @@
+/*2019.09.04 finished*/
 #include <vector>
 #include <cstdio>
 #include <cstring>
@@ -38,7 +39,7 @@ int main(){
 		memset(visit, 0, sizeof(visit));
 		memset(DP, 0, sizeof(DP));
 		
-		//save conviviality ( ®ðª^­È )
+		//save conviviality ( æ°£æ°›å€¼ )
 		for(i=1; i<=emNum; i++){
 			next2[i].clear(); //remember to initialize
 			cin >> DP[i][1];
@@ -49,13 +50,13 @@ int main(){
 		
 		int L, K, lead=1;
 		
-		//save supervisor-employee relationship ( ¤W¤UÄÝÃö«Y )
+		//save supervisor-employee relationship ( ä¸Šä¸‹å±¬é—œä¿‚ )
 		while(cin >> L >> K &&  ( L != 0 && K != 0 ) ){
 			next2[K].push_back(L); // = K->L
 			pre[L] = K; //= K->L , the previous node of L is K
 		}
 		
-		//find the root ( §ä®ÚÂI )
+		//find the root ( æ‰¾æ ¹é»ž )
 		while(pre[lead] != 0)
 			lead = pre[lead];
 			
