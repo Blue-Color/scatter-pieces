@@ -1,3 +1,4 @@
+/*2019.09.03 finished*/
 #include <map> 
 #include <string>
 #include <iostream>
@@ -16,14 +17,15 @@ int main(){
 		
 		cin >> ct; 
 		
-		getline(cin, name);
+		getline(cin, name); 
 		
+		//use map
 		m[ct]++;
 		
 		total--;
 	}
 	for(map<string, int>::iterator it=m.begin(); it!=m.end(); it++)
-		cout << it->first.c_str() <<" " << it->second << endl;
+		cout << it->first.c_str() << " " << it->second << endl;
 	
 	return 0;
 }
