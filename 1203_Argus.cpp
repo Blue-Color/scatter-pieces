@@ -1,14 +1,17 @@
+/*2019.09.03 finished*/
 #include <cstdio>
 #include <queue>
 #include <iostream>
 using namespace std;
 
+//when you use priority queue
 struct argus{
 	
 	int qID;
 	int time;
 	int period;
 	
+	//the queue needs to be increasing numbers
 	bool operator <(const argus &lhs) const{
 		if(time == lhs.time){
 			return lhs.qID < qID;
