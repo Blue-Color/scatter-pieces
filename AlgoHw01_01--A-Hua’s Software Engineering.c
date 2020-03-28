@@ -1,11 +1,10 @@
 /*2020.03.24 finished*/
 /*FINAL VER.*/
+//Result : all right
 #include <stdio.h>
 #include <stdint.h>
 
-
 uint32_t a1, a2, x, y, n;
-
 
 void matrixMulti(uint64_t m[2][2], uint64_t m2[2][2]);
 uint64_t power(uint64_t m[2][2], uint32_t);
@@ -36,7 +35,6 @@ int main(){
     return 0;
     
 }
-
 
 void matrixMulti(uint64_t m[2][2], uint64_t m2[2][2]){
     uint64_t newX = ( (m[0][0]%1000000007*m2[0][0]%1000000007)%1000000007 + (m[0][1]%1000000007*m2[1][0]%1000000007)%1000000007 )%1000000007;
@@ -71,13 +69,11 @@ uint64_t power(uint64_t m[2][2], uint32_t n){
 
 
 /*MY ORIGINAL VER.*/
-
+//Result : small number tests (3 <= n <= 10^6) all right, big number tests (3 <= n <= 2^31-1) time excceeded
 #include <stdio.h>
 #include <stdint.h>
 
-
 uint32_t a1, a2, x, y, n;
-
 
 int main(){
 
@@ -113,6 +109,5 @@ int main(){
 	printf("%ld", ans);
 
 	return 0;
-	
 }
 
