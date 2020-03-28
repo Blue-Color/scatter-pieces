@@ -1,3 +1,5 @@
+/*2020.03.24 finished*/
+/*FINAL VER.*/
 #include <stdio.h>
 #include <stdint.h>
 
@@ -25,7 +27,6 @@ int main(){
     m[1][0]=1;
     m[1][1]=0;
 
-    //printf("\nm = %d   %d   %d   %d\n\n", m[0][0], m[0][1], m[1][0], m[1][1]);
      //n starts from 3
     power(m, n-2);
 
@@ -65,3 +66,53 @@ uint64_t power(uint64_t m[2][2], uint32_t n){
 
     return m[0][0];
 }
+
+
+
+
+/*MY ORIGINAL VER.*/
+
+#include <stdio.h>
+#include <stdint.h>
+
+
+uint32_t a1, a2, x, y, n;
+
+
+int main(){
+
+	uint64_t m[2][2];
+	uint64_t newY, newX, newM1, newM2, ans;
+	scanf("%d%d%d%d%d", &a1, &a2, &x, &y, &n);
+
+	if(n==3){
+		ans = (x*a2 + y*a1)%1000000007;
+		printf("\n%d %d %d %d %d\n", a1, a2, x, y,n);
+		printf("%ld", ans);
+		return 0;
+	}
+	m[0][0]=x;
+	m[0][1]=y;
+	m[1][0]=1;
+	m[1][1]=0;
+    
+	 //n starts from 3
+	for(int i=0; i<n-3; i++){
+		newX = ( (m[0][0]%1000000007*x%1000000007)%1000000007 + (m[0][1]%1000000007*1)%1000000007 )%1000000007;
+		newY = (m[0][0]%1000000007*y%1000000007)%1000000007;
+		newM1 = ( (m[1][0]%1000000007*x%1000000007)%1000000007 + (m[1][1]%1000000007*1)%1000000007 )%1000000007;
+		newM2 = (m[1][0]%1000000007*y%1000000007)%1000000007;
+
+		m[0][0] = newX;
+		m[0][1] = newY;
+		m[1][0] = newM1;
+		m[1][1] = newM2;
+		//printf("\nm = %d   %d   %d   %d\n\n", m[0][0], m[0][1], m[1][0], m[1][1]);
+	}
+	ans = ( (m[0][0]*a2)%1000000007 + (m[0][1]*a1)%1000000007 )%1000000007;
+	printf("%ld", ans);
+
+	return 0;
+	
+}
+
