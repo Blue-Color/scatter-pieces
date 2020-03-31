@@ -111,3 +111,61 @@ int main(){
 	return 0;
 }
 
+
+
+/*TA's code*/
+
+/*
+#include <iostream>
+#define IOS() ios_base::sync_with_stdio(0); cin.tie(0)
+#define MOD 1000000007
+using namespace std;
+typedef long long ll;
+
+//二維矩陣
+struct matrix{
+    ll m[2][2];
+};
+
+//矩陣乘法
+inline matrix mul(const matrix &a, const matrix &b, ll mod){
+    matrix c;
+    for (int i = 0; i < 2; i++){
+        for (int j = 0; j < 2; j++){
+            c.m[i][j] = 0;
+            for (int k = 0; k < 2; k++)
+                c.m[i][j] = (c.m[i][j] + a.m[i][k] * b.m[k][j] % mod) % mod;
+        }
+    }
+    return c;
+}
+
+//矩陣快速冪 for a^n
+inline matrix matrixexp(const matrix &a, ll n, ll mod){
+    matrix ans = {
+        1, 0,
+        0, 1};
+    matrix base = a;
+    while (n > 0){
+        if (n & 1)
+            ans = mul(ans, base, mod);
+        base = mul(base, base, mod);
+        n >>= 1; //n = n /2
+    }
+    return ans;
+}
+
+int main(){
+    IOS();
+    ll a1, a2, x, y, n;
+    cin >> a1 >> a2 >> x >> y >> n;
+
+    matrix a = {
+        x, y,
+        1, 0};
+
+    matrix c = matrixexp(a, n - 2, MOD);
+    cout << (c.m[0][0] * a2 % MOD + c.m[0][1] * a1 % MOD) % MOD << endl;
+    return 0;
+}
+*/
