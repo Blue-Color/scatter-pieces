@@ -1,3 +1,6 @@
+/*2020.04.06 finished*/
+/*FINAL VER.*/
+//Result :all right ( this question is easier, so i only have one version )
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -7,18 +10,15 @@ long merge(long long arr[], int l, int m, int r) {
     int i, j, k; 
     int n1 = m - l + 1; 
     int n2 =  r - m; 
-  	long invC=0;
+	long invC=0;
 
     long L[n1], R[n2]; 
  
-  
-    
     for (i = 0; i < n1; i++) 
         L[i] = arr[l + i]; 
     for (j = 0; j < n2; j++) 
         R[j] = arr[m + 1+ j]; 
-  
-   
+ 
     i = 0; 
     j = 0;
     k = l; 
@@ -34,15 +34,13 @@ long merge(long long arr[], int l, int m, int r) {
         } 
         k++; 
     } 
-  
-   
+ 
     while (i < n1) { 
         arr[k] = L[i]; 
         i++; 
         k++; 
     } 
-  
-    
+     
     while (j < n2) { 
         arr[k] = R[j]; 
         j++; 
@@ -51,13 +49,11 @@ long merge(long long arr[], int l, int m, int r) {
     return invC;
 } 
   
-
 long mergeSort(long long arr[], int l, int r) { 
 	long invCount=0;
 	//printf("\nl = %d   r = %d\n", l, r);
     if (l < r) { 
         int m = l+(r-l)/2; 
-  
         // Sort first and second halves 
        invCount += mergeSort(arr, l, m); 
         invCount += mergeSort(arr, m+1, r); 
@@ -67,10 +63,8 @@ long mergeSort(long long arr[], int l, int r) {
     return invCount;
 } 
 
-
 int main(){
 
-	
 	scanf("%d", &n);
 
 	long long*odd = (long long *)malloc(n*sizeof(long long));
@@ -91,7 +85,6 @@ int main(){
 		
 	}
 	
-
 	long inv1, inv2;
 	long long ans;
 	mergeSort(ori, 0, n-1);
