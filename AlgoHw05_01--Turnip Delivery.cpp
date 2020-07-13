@@ -1,3 +1,6 @@
+/*2020.06.12 finished*/
+/*FINAL.VER*/
+// Result : all right
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -74,12 +77,10 @@ int main(){
 	int min=graph[t][pre[t]], fv = pre[t];
 
 	for(int i=1; pre[fv]!=0; i++){
-		//printf("1   fv = %d   pre = %d\n", fv, pre[fv]);
 		if(graph[fv][pre[fv]] < min){
 			min = graph[fv][pre[fv]];
 		}
 		fv=pre[fv];
-		//printf("2   fv = %d   pre = %d\n", fv, pre[fv]);
 	}
 	cout << min;
 	return 0;
