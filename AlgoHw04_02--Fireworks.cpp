@@ -1,3 +1,6 @@
+/*2020.05.16 finished*/
+/*FINAL.VER*/
+// Result : 1 <= l < r <= 10 wrong, else right
 #include <bits/stdc++.h>
 using namespace std;
 
