@@ -1,3 +1,6 @@
+/*2020.06.11 finished*/
+/*FINAL.VER*/
+// Result : all right
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -22,11 +25,8 @@ void floodFill(char **land, int x, int y, int n, int m, int k){
 	while(!lava.empty()){
 		P tmp = lava.front();
 		lava.pop();
-		//printf("c = %d\n\n", tmp.count);
 		
-
 		int nowX=tmp.X, nowY=tmp.Y;
-	//	printf("x = %d   y = %d  c= %d\n", nowX, nowY, c);
 		if(land[nowX][nowY] == 'C')
 			land[nowX][nowY] = 'X';
 		else if(land[nowX][nowY] == 'X' || land[nowX][nowY] == 'O')
@@ -67,9 +67,7 @@ int main(){
 				y=j;
 			}
 			land[i][j]=tmp;
-			//printf("%c", land[i][j]);
 		}
-		//printf("\n");
 	}
 	floodFill(land, x, y, n, m, k);
 	for(int i=0; i<n;i++){
