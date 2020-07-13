@@ -1,3 +1,6 @@
+/*2020.05.12 finished*/
+/*FINAL.VER*/
+// Result : all right
 #include <bits/stdc++.h>
 using namespace std;
 
