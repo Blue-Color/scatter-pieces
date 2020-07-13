@@ -1,3 +1,6 @@
+/*2020.06.04 finished*/
+/*FINAL.VER*/
+// Result : all right
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -35,23 +38,9 @@ int main(){
 		cin >> u >> v >> w;
 		graph[u][v]=w;
 	}
-/*
-	for(int i=1; i<=n; i++){
-		for(int j=1; j<=n; j++){
-			printf("%d ", graph[i][j]);
-		}
-		printf("\n");
-	}
-*/
+
 	FloydWarshall(graph, n);
-	/*printf("\n======\n\n");
-	for(int i=1; i<=n; i++){
-		for(int j=1; j<=n; j++){
-			printf("%d ", graph[i][j]);
-		}
-		printf("\n");
-	}
-*/
+	
 	long min=500000;
 
 	for(int i=1; i<=n; i++){
