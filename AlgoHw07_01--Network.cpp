@@ -1,3 +1,5 @@
+/*2020.06.26 finished*/
+// Result : all right
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -36,7 +38,6 @@ bool bfs(long **graph, int n, int start, int end, int pre[]){
 long fordFulkerson(long **graph, int n, int s, int t){
 
 	long maxFlow=0;
-
 
 	int pre[n+1];
 
