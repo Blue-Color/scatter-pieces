@@ -1,3 +1,5 @@
+/*2020.06.12 finished*/
+// Result : all right
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -21,19 +23,17 @@ void dijkstraPQ(list<node> road[], long n, long start, long *dist){
 		long from=pqueue.top().second;
 		pqueue.pop();
 
-		//printf("from = %d\n\n\n", from);
 		list<node>::iterator i=road[from].begin();
 
 		for(i; i!=road[from].end(); i++){
 			long to=(*i).vertex;
 			long w=(*i).weight;
-			//printf("to = %d   w = %d\n", to, w);
 
 			if(dist[from] + w < dist[to]){
 				dist[to] = dist[from] + w;
 				pqueue.push(make_pair(dist[to], to));
 			}
-			//printf("dist %d = %d   dist %d = %d\n", to, dist[to], from, dist[from]);
+			
 		}
 	}
 
@@ -64,10 +64,7 @@ int main(){
 	dijkstraPQ(road, n, home, dist);
 
 	long long ans=0;
-	/*for(int i=1 ; i<=n ;i++){
-		printf("dist %d = %d\n", i, dist[i]);
-	}
-	printf("\n===\n\n");*/
+	
 	ans += dist[s1]+dist[cus];
 
 	for(int i=1; i<=n; i++)
